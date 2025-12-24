@@ -1,0 +1,59 @@
+{
+  "environment": {
+    "name": "OmnicopterEnv",
+    "version": "1.0.0",
+    "description": "Omnicopter control environment with wind disturbances"
+  },
+  "simulation": {
+    "dt": 0.01,
+    "max_episode_steps": 1000,
+    "render_mode": null
+  },
+  "omnicopter": {
+    "mass": 2.5,
+    "inertia": {
+      "Ixx": 0.015,
+      "Iyy": 0.015,
+      "Izz": 0.025
+    },
+    "arm_length": 0.25,
+    "num_rotors": 8,
+    "thrust_coefficient": 1.0,
+    "torque_coefficient": 0.01,
+    "max_thrust_per_rotor": 10.0
+  },
+  "wind": {
+    "enabled": true,
+    "model": "dryden",
+    "mean_velocity": [7.5, 0.0, 0.0],
+    "turbulence_intensity": 0.15,
+    "length_scale": 100.0
+  },
+  "observation_space": {
+    "position": true,
+    "velocity": true,
+    "orientation": true,
+    "angular_velocity": true,
+    "wind_velocity": true,
+    "target_position": true
+  },
+  "action_space": {
+    "type": "continuous",
+    "low": -1.0,
+    "high": 1.0,
+    "shape": [8]
+  },
+  "reward": {
+    "tracking_weight": 1.0,
+    "energy_weight": 0.5,
+    "smoothness_weight": 0.1,
+    "orientation_weight": 0.3
+  },
+  "safety": {
+    "max_position_deviation": 50.0,
+    "min_altitude": -10.0,
+    "max_altitude": 100.0,
+    "max_velocity": 20.0,
+    "max_angular_velocity": 10.0
+  }
+}

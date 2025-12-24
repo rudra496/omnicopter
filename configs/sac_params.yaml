@@ -1,0 +1,39 @@
+# SAC Hyperparameters Configuration
+
+# Training parameters
+total_timesteps: 1000000
+learning_rate: 0.0003
+buffer_size: 1000000
+batch_size: 256
+tau: 0.005
+gamma: 0.99
+
+# Network architecture
+net_arch:
+  - 256
+  - 256
+
+# Environment parameters
+wind_params:
+  mean_speed: 7.5  # m/s
+  std_speed: 2.5   # m/s
+  turbulence_intensity: 0.15
+
+# Domain randomization
+domain_randomization: true
+mass_range: [2.0, 3.5]  # kg
+inertia_scale_range: [0.8, 1.2]
+thrust_coeff_range: [0.9, 1.1]
+
+# Reward weights
+reward_weights:
+  tracking_error: 1.0
+  energy_consumption: 0.5
+  control_smoothness: 0.1
+
+# Logging
+log_interval: 10
+save_interval: 50000
+
+# Random seed
+random_state: 42

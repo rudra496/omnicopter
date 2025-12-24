@@ -1,0 +1,29 @@
+# XGBoost Hyperparameters Configuration
+
+# Data parameters
+data_path: "data/raw/dataset_rl_distill.csv"
+test_size: 0.2
+validation_size: 0.1
+
+# XGBoost parameters
+max_depth: 6
+learning_rate: 0.1
+n_estimators: 100
+min_child_weight: 1
+subsample: 0.8
+colsample_bytree: 0.8
+colsample_bylevel: 0.8
+gamma: 0.0
+reg_alpha: 0.0
+reg_lambda: 1.0
+
+# Training parameters
+early_stopping_rounds: 10
+eval_metric: "rmse"
+verbose: true
+
+# Model output
+model_output_dir: "results/models/"
+
+# Random seed
+random_state: 42
