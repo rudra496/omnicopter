@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite our paper."
+title: "Distilling Energy-Aware Null-Space Control for an Omnidirectional UAV into a Real-Time Supervised Oracle"
+authors:
+  - family-names: Sarker
+    given-names: Rudra
+    email: rudrasarker130@gmail.com
+version: 1.0.0
+date-released: 2024-05-20
+url: "https://github.com/rudra496/omnicopter"
+repository-code: "https://github.com/rudra496/omnicopter"
+license: MIT
