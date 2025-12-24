@@ -1,0 +1,2 @@
+Model,R2(z1),R2(z2),Approx latency (ms/sample)
+XGBoost oracle (distilled),0.9918285608291626,0.9947307109832764,0.057004328125458414
